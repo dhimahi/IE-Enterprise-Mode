@@ -8,7 +8,7 @@ Detect IE11 running in Enterprise (IE8) mode via JavaScript
 Add the following code to your page anywhere you like.
 
 ```html
-<!--[if IE 8]>
+<!--[if lt IE 9]>
 <script src="enterprise.js">
 	if(enterpriseMode){
 		alert('Emulated IE8');

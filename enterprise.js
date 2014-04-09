@@ -1,8 +1,18 @@
 ;(function(window, document){
 	function enterpriseMode(){
+
+		//check if spellcheck is supported, if so we are using an emulated version of IE
 		if('spellcheck' in document.createElement('textarea')){
-			return true;
+			//check if we are in document mode in IE 9+
+			if (document.all && document.documentMode <= 8 && !document.addEventListener) {
+				//we are running in document mode not enterprise mode!
+				return false
+			}else{
+				//Enterprise mode. Yay! - or IE10 if conditional comments are omitted :(
+				return true;
+			}
 		}else{
+			//real IE 6,7,8, (9 this shouldn't be here if the conditional comments exist!) 
 			return false;
 		}
 	}
