@@ -1,9 +1,11 @@
 ;(function(window, document){
-	var window.enterpriseMode;
-
-	if('spellcheck' in document.createElement('textarea')){
-		return window.enterpriseMode = true;
-	}else{
-		return window.enterpriseMode = false;
+	function enterpriseMode(){
+		if('spellcheck' in document.createElement('textarea')){
+			return true;
+		}else{
+			return false;
+		}
 	}
+
+	return window.enterpriseMode = enterpriseMode();
 })(window, document, undefined);
