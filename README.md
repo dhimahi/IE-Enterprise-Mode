@@ -19,4 +19,4 @@ Add the following code to your page anywhere you like.
 <![endif]-->
 ```
 
-*Note:* We use an IE8 conditional comment to only run this code for real IE8 and IE11 emulating IE8 via Enterprise Mode.
+*Note:* We use an IE conditional comment to only run this code for real versions of legacy IE and IE11 emulating legacy IE via Enterprise Mode.
