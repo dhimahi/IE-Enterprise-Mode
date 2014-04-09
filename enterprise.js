@@ -3,7 +3,7 @@
 
 		//check if spellcheck is supported, if so we are using an emulated version of IE
 		if('spellcheck' in document.createElement('textarea')){
-			//check if we are in document mode in IE 9+
+			//check if we are in legacy document mode in IE 10+
 			if (document.all && document.documentMode <= 8 && !document.addEventListener) {
 				//we are running in document mode not enterprise mode!
 				return false
