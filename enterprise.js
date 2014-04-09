@@ -1,7 +1,9 @@
 ;(function(window, document){
+	var window.enterpriseMode;
+
 	if('spellcheck' in document.createElement('textarea')){
-		return true;
+		return window.enterpriseMode = true;
 	}else{
-		return false;
+		return window.enterpriseMode = false;
 	}
 })(window, document, undefined);
