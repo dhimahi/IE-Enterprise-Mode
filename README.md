@@ -12,8 +12,6 @@ Add the following code to your page anywhere you like.
 <script src="enterprise.js">
 	if(enterpriseMode){
 		alert('Emulated IE8');
-	}else{
-		alert('Real IE8');
 	}
 </script>
 <![endif]-->
